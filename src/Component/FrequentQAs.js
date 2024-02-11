@@ -1,20 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faX, faXmark } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 
 export default function FrequentQAs(props) {
   const questionAnswer = props.questionAnswer;
-  let [icon, setIcon] = useState(faPlus);
+  const [icon, setIcon] = useState(faPlus);
   const [display, setDisplay] = useState("hidden");
-  const opened = (event) => {
-    if (display === "hidden") {
-      setDisplay("");
+
+  const opened = () => {
+    if (icon == faPlus) {
       setIcon(faXmark);
+      setDisplay("");
     } else {
-      setDisplay("hidden");
       setIcon(faPlus);
+      setDisplay("hidden");
     }
   };
+
   return (
     <div>
       <div
@@ -26,7 +28,7 @@ export default function FrequentQAs(props) {
           <FontAwesomeIcon icon={icon} size="2x" />
         </div>
       </div>
-      <div className="w-[100%] bg-gray-900">
+      <div className="w-[100%] bg-gray-900 ">
         <div className={display}>
           <div className="h-[3px] bg-black"></div>
           <div className="p-[20px_10px] items-center">

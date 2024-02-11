@@ -22,6 +22,7 @@ function App() {
       <CreateProfile></CreateProfile>
       <Gap></Gap>
       <Question></Question>
+      <Gap></Gap>
     </div>
   );
 }
