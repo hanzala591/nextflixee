@@ -7,6 +7,7 @@ import Download from "./Component/Download";
 import Watch from "./Component/Watch";
 import CreateProfile from "./Component/CreateProfile";
 import Question from "./Component/Question";
+import Footer from "./Component/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Gap></Gap>
       <Question></Question>
       <Gap></Gap>
+      <Footer></Footer>
     </div>
   );
 }
