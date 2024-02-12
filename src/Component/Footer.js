@@ -1,6 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { faCaretDown, faLanguage } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCake,
+  faCaretDown,
+  faLanguage,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
@@ -10,41 +14,41 @@ export default function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 mt-3">
           <div>
             <ul>
-              <a className="block py-1">FAQ</a>
-              <a className="block py-1">Investor Relations</a>
-              <a className="block py-1">Privacy</a>
-              <a className="block py-1">Speed Test</a>
+              <a className="block py-1 cursor-pointer">FAQ</a>
+              <a className="block py-1 cursor-pointer">Investor Relations</a>
+              <a className="block py-1 cursor-pointer">Privacy</a>
+              <a className="block py-1 cursor-pointer">Speed Test</a>
             </ul>
           </div>
           <div>
             <ul>
-              <a className="block py-1">Help Center</a>
-              <a className="block py-1">Jobs</a>
-              <a className="block py-1">Cookie Preferences</a>
-              <a className="block py-1">Legal Notices</a>
+              <a className="block py-1 cursor-pointer">Help Center</a>
+              <a className="block py-1 cursor-pointer">Jobs</a>
+              <a className="block py-1 cursor-pointer">Cookie Preferences</a>
+              <a className="block py-1 cursor-pointer">Legal Notices</a>
             </ul>
           </div>
           <div>
             <ul>
-              <a className="block py-1">Account</a>
-              <a className="block py-1">Ways to Watch</a>
-              <a className="block py-1">Corporate Information</a>
-              <a className="block py-1">Only on Netflix</a>
+              <a className="block py-1 cursor-pointer">Account</a>
+              <a className="block py-1 cursor-pointer">Ways to Watch</a>
+              <a className="block py-1 cursor-pointer">Corporate Information</a>
+              <a className="block py-1 cursor-pointer">Only on Netflix</a>
             </ul>
           </div>
           <div>
             <ul>
-              <a className="block py-1">Media Center</a>
-              <a className="block py-1">Terms of Use</a>
-              <a className="block py-1">Contact Us</a>
+              <a className="block py-1 cursor-pointer">Media Center</a>
+              <a className="block py-1 cursor-pointer">Terms of Use</a>
+              <a className="block py-1 cursor-pointer">Contact Us</a>
             </ul>
           </div>
         </div>
-        <div className="p-[5px_10px] border w-fit mt-5 rounded">
+        <button className="p-[5px_10px] border w-fit mt-5 rounded">
           <FontAwesomeIcon icon={faLanguage} className="text-white pr-2" />
-          <button>English</button>
+          English
           <FontAwesomeIcon icon={faCaretDown} className="pl-2" />
-        </div>
+        </button>
       </div>
     </div>
   );
