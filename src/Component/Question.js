@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import FrequentQAs from "./FrequentQAs";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 export default function Question() {
   const [questionAnswer, setQuestionAnswer] = useState([
@@ -28,7 +28,7 @@ export default function Question() {
       answer:
         "Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.",
     },
-    ,
+
     {
       question: "Is Netflix good for Kids?",
       answer:
@@ -36,12 +36,32 @@ export default function Question() {
     },
   ]);
 
+  const [questionAnswerIndex, setQuestionAnswerIndex] = useState(null);
+  const [icon, setIcon] = useState(faPlus);
+
+  const opened = (index) => {
+    if (questionAnswerIndex === index) {
+      setQuestionAnswerIndex(null);
+      setIcon(faPlus);
+    } else {
+      setQuestionAnswerIndex(index);
+      setIcon(faXmark);
+    }
+  };
+
   let FrequentQA = questionAnswer.map((currentValue, index, arr) => {
     return (
       <FrequentQAs
         questionAnswer={currentValue}
         index={index}
         key={index}
+        opened={opened}
+        clickee={
+          questionAnswerIndex === index
+            ? "h-[auto] scale-y-100 duration-300"
+            : "h-[0px] scale-y-0 duration-100"
+        }
+        icon={questionAnswerIndex === index ? icon : faPlus}
       ></FrequentQAs>
     );
   });
